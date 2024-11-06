@@ -1,0 +1,9 @@
+scss/
+_cssback/
+*.mp4
+style.css.map
+.vscode
+dev-html/
+dev-html2/
+legacy-html/
+legacy-htmlv2/
