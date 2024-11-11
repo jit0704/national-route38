@@ -1,0 +1,794 @@
+@charset "UTF-8";
+/* 모니터링 좌측 화면 */
+.congestion-noti-monitering.v2 .ly-left > article {
+  width: 100%;
+  border-radius: 10px;
+  background: #2b526c;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.05);
+}
+.congestion-noti-monitering.v2 .ly-left .content-top {
+  height: 317px;
+}
+.congestion-noti-monitering.v2 .ly-left .content-top h2 {
+  padding: 18.5px 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.congestion-noti-monitering.v2 .ly-left .content-top h2 i {
+  padding-inline: 5px;
+}
+.congestion-noti-monitering.v2 .ly-left .content-top .bind {
+  height: auto;
+  padding: 20px 15px;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.congestion-noti-monitering.v2 .ly-left .content-top .bind ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0 5px;
+}
+.congestion-noti-monitering.v2 .ly-left .content-top .bind ul li + li {
+  margin-top: 5px;
+}
+.congestion-noti-monitering.v2 .ly-left .content-top .bind ul li span {
+  flex: 1;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  letter-spacing: -0.42px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  align-content: center;
+}
+.congestion-noti-monitering.v2 .ly-left .content-top .bind ul li span:first-child {
+  border: 1px solid #597081;
+}
+.congestion-noti-monitering.v2 .ly-left .content-top .bind ul li span.good {
+  background: #00c337;
+}
+.congestion-noti-monitering.v2 .ly-left .content-top .bind ul li span.stand-by {
+  color: rgba(255, 255, 255, 0.5);
+  background: #3d637e;
+}
+.congestion-noti-monitering.v2 .ly-left .content-top .bind ul li span.ongoing {
+  background: #193d56;
+}
+.congestion-noti-monitering.v2 .ly-left .content-mid {
+  height: 148px;
+  padding: 20px 15px;
+}
+.congestion-noti-monitering.v2 .ly-left .content-mid table thead th {
+  height: 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+.congestion-noti-monitering.v2 .ly-left .content-mid table tbody th {
+  color: #fff;
+  font-weight: 500;
+  text-align: left;
+  letter-spacing: -0.42px;
+}
+.congestion-noti-monitering.v2 .ly-left .content-mid table tbody td {
+  text-align: center;
+}
+.congestion-noti-monitering.v2 .ly-left .content-mid table tbody td span {
+  display: block;
+  width: 33.6px;
+  margin-bottom: 4px;
+  line-height: 24px;
+  border-radius: 5px;
+  color: #254e6c;
+  background: #a4cfee;
+}
+.congestion-noti-monitering.v2 .ly-left .content-mid table tbody td .error {
+  color: #fff;
+  background: #c20000;
+}
+.congestion-noti-monitering.v2 .ly-left .content-mid table tbody td .void {
+  color: #afafaf;
+  background: #ededed;
+}
+.congestion-noti-monitering.v2 .ly-left .content-mid table tbody tr:last-child td {
+  margin-bottom: 0;
+}
+.congestion-noti-monitering.v2 .ly-left .content-bot {
+  height: 347px;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.congestion-noti-monitering.v2 .ly-left .content-bot .tbl-bind {
+  height: 100%;
+  overflow-y: auto;
+}
+.congestion-noti-monitering.v2 .ly-left .content-bot thead {
+  position: sticky;
+  top: 0;
+}
+.congestion-noti-monitering.v2 .ly-left .content-bot thead th:first-child span {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.congestion-noti-monitering.v2 .ly-left .content-bot thead th:last-child span {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.congestion-noti-monitering.v2 .ly-left .content-bot thead span {
+  display: block;
+  height: 54px;
+  align-content: center;
+  color: #fff;
+  font-weight: 500;
+  background: #2b516c;
+}
+.congestion-noti-monitering.v2 .ly-left .content-bot tbody tr {
+  cursor: default;
+}
+.congestion-noti-monitering.v2 .ly-left .content-bot tbody td {
+  height: 41.8px;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: -0.36px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.congestion-noti-monitering.v2 .monitering-condition-tab {
+  padding: 15px 25px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-tab .tab-btn-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0 5px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-tab .tab-btn-wrap .tab-btn {
+  min-width: 90px;
+  line-height: 31px;
+  font-size: 18px;
+  color: #bfbfbf;
+  text-align: center;
+  border-radius: 5px;
+  background: #f0f0f0;
+}
+.congestion-noti-monitering.v2 .monitering-condition-tab .tab-btn-wrap .tab-btn.active {
+  color: #fff;
+  background: #03a0fc;
+}
+.congestion-noti-monitering.v2 .monitering-condition-tab .state-legend {
+  margin-right: 0;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 265px;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container aside {
+  width: 190.6px;
+  padding: 15px 20px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container aside.right .bind img {
+  transform: rotate(180deg);
+}
+.congestion-noti-monitering.v2 .monitering-condition-container aside .tit {
+  display: block;
+  line-height: 19px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e5f8d;
+  text-align: center;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container aside .bind {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0 10px;
+  margin-top: 14px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container aside .bind img {
+  width: 19.6px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container aside .bind .meter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 17px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container aside .bind .meter i {
+  width: 19px;
+  margin-top: -19.25px;
+  transform: rotate(90deg);
+  font-weight: 600;
+  color: #afafaf;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container aside .bind .meter::before {
+  content: "";
+  height: 100%;
+  background: url(/base/images/arr_section_vertical.png) no-repeat 50% 0;
+  background-size: 6px 79px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container aside .bind .meter::after {
+  content: "";
+  height: 100%;
+  background: url(/base/images/arr_section_vertical.png) no-repeat 50% 0;
+  background-size: 6px 79px;
+  transform: rotate(-180deg);
+}
+.congestion-noti-monitering.v2 .monitering-condition-container aside .bind .cell-group-bind {
+  width: 94px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0 2px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container aside .bind .cell-group-bind .cell-group {
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2px 0;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container aside .bind .cell-group-bind .cell-group span {
+  background: #00c337;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container aside .bind .cell-group-bind .cell-group span.slow {
+  background: #ffee59;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered {
+  width: 1170px;
+  padding: 15px 20px;
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .dotted-line {
+  margin: 8px 0 7px;
+  width: 100%;
+  height: 0;
+  border-top: 1px dashed #696969;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered-inner {
+  padding: 0 20px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .sign-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0 5px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .sign-wrap em {
+  line-height: 23px;
+  border-radius: 5px;
+  background: #dceef9;
+  text-align: center;
+  font-weight: 700;
+  color: #1a5783;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .section-info {
+  position: relative;
+  margin-top: 14px;
+  padding-top: 45px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .section-info-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .section-info-inner [class*=sec] {
+  position: relative;
+  border-right: 1px solid #193d56;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .section-info-inner [class*=sec] i {
+  position: absolute;
+  top: 0;
+  right: -13px;
+  width: 26px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  background: #193d56;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .section-info-inner [class*=sec] span {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 19px 2px 0;
+  line-height: 17px;
+  text-align: center;
+  font-size: 14px;
+  color: #afafaf;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .section-info-inner [class*=sec] span::before {
+  content: "";
+  flex: 1;
+  background: url(/base/images/arr_section.png) no-repeat 0 50%;
+  background-size: 203px 7px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .section-info-inner [class*=sec] span::after {
+  content: "";
+  flex: 1;
+  transform: rotate(180deg);
+  background: url(/base/images/arr_section.png) no-repeat 0 50%;
+  background-size: 203px 7px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .section-info .distance-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .section-info .distance-wrap span {
+  flex: 1;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .section-info.bot {
+  margin-top: 0;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .section-info.bot .section-info-inner {
+  top: -8px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .section-info.bot .section-info-inner [class*=sec] i {
+  top: auto;
+  bottom: 0;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .section-info.bot .section-info-inner [class*=sec] span {
+  margin-top: 8px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .cell-bar-v2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1px 0;
+  width: 100%;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .cell-bar-v2.is-directions {
+  position: relative;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .cell-bar-v2.is-directions .txt-directions {
+  position: absolute;
+  height: 19px;
+  top: 0;
+  align-content: center;
+  color: #878585;
+  text-align: center;
+  background: #cfcfcf;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .cell-group-v2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0 1px;
+  width: 100%;
+  height: 9px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .cell-group-v2 span {
+  background: #00c337;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .cell-group-v2 span.bg-gray2 {
+  background: #cfcfcf;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .cell-group-v2 span.slow {
+  background: #ffee59;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .cell-group-v2 span.cong {
+  background: #c20000;
+}
+.congestion-noti-monitering.v2 .monitering-map-container {
+  position: relative;
+  height: 505px;
+  padding: 15px;
+}
+.congestion-noti-monitering.v2 .monitering-map-container > [class*=ico] {
+  position: absolute;
+  z-index: 1;
+}
+
+/* 지도 > 버튼 아이콘 */
+.ico-vms {
+  width: 40px;
+  height: 52.72px;
+  background-image: url("/base/images//map/ic_vms.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  cursor: pointer;
+}
+.ico-vms.active {
+  background-image: url(/base/images/map/ic_vms_active.svg);
+}
+.ico-car {
+  width: 28px;
+  height: 28px;
+  background-image: url("/base/images//map/ic_car.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  cursor: pointer;
+}
+.ico-car.active {
+  background-image: url(/base/images/map/ic_car_active.svg);
+}
+.ico-obstacle {
+  width: 30px;
+  height: 25.71px;
+  background-image: url("/base/images//map/ic_obstacle.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  z-index: 2;
+}
+.ico-unexpected {
+  width: 25px;
+  height: 25px;
+  background-image: url("/base/images//map/ic_unexpected.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  z-index: 2;
+}
+
+.menu-popup {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  padding: 5px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.menu-popup.active {
+  display: block;
+}
+.menu-popup:hover {
+  cursor: pointer;
+}
+.menu-popup a {
+  display: block;
+  padding: 0 10px;
+  line-height: 23px;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px solid #e8e8e8;
+  transition: background 0.2s;
+}
+.menu-popup a + a {
+  margin-top: 2px;
+}
+.menu-popup a:hover {
+  color: #fff;
+  background: #03a0fc;
+}
+
+/* 지도 > 카메라, 레이더 팝업 */
+.camera-popup-container {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  min-width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #727272;
+  background: #3d3d3d;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.camera-popup-container.active {
+  display: block;
+}
+.camera-popup-container.radar .tit {
+  font-size: 18px;
+}
+.camera-popup-container.radar .btn-expansion {
+  display: none;
+}
+.camera-popup-container.radar .camera-popup-content {
+  width: 665px;
+}
+.camera-popup-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.camera-popup-header .tit {
+  line-height: 18px;
+  color: #fff;
+  font-weight: 600;
+}
+.camera-popup-header .bind {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0 4px;
+}
+.camera-popup-header .btn-expansion {
+  padding: 0 4px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.camera-popup-header .btn-popup-close {
+  width: 16px;
+  height: 16px;
+  background-image: url("/base/images/btn_close_white_small.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 10px 10px;
+}
+.camera-popup-content {
+  width: 280px;
+  margin-top: 11px;
+}
+
+/* 지도 > 정보 팝업 */
+.simple-popup-container {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  width: 366px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.1);
+}
+.simple-popup-container.active {
+  display: block;
+}
+.simple-popup-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.simple-popup-header .tit {
+  line-height: 22px;
+  color: #1e5f8d;
+  font-size: 18px;
+  font-weight: 700;
+}
+.simple-popup-header .btn-popup-close {
+  width: 14px;
+  height: 14px;
+  background-image: url("/base/images/btn_close_gray.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.simple-popup-content {
+  padding: 20px 25px;
+}
+.simple-popup-content .simple-tbl {
+  border-top: 1px solid #cbcbcb;
+  border-bottom: 1px solid #cbcbcb;
+}
+.simple-popup-content .simple-tbl tbody th,
+.simple-popup-content .simple-tbl tbody td {
+  padding: 5px 10px;
+  color: #727272;
+  border-bottom: 1px solid #e8e8e8;
+}
+.simple-popup-content .simple-tbl tbody tr:last-child th,
+.simple-popup-content .simple-tbl tbody tr:last-child td {
+  border-bottom: 0;
+}
+.simple-popup-content .simple-tbl tbody th {
+  text-align: left;
+  font-weight: 600;
+  background: #f8f8f8;
+}
+.simple-popup-content .simple-tbl tbody td {
+  font-weight: 400;
+  word-break: break-all;
+}
+
+/* 지도 > 우측 상단 아이콘 버튼 리스트 */
+.map-iconbar-container .map-icon-list button em {
+  font-size: 9px;
+}
+.map-iconbar-container .map-icon-list .ic1 span::before {
+  width: 13.24px;
+  height: 17.46px;
+  background-image: url("/base/images//map-right-iconbar/iconbar1.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.map-iconbar-container .map-icon-list .ic1.active span::before {
+  background-image: url(/base/images/map-right-iconbar/iconbar1_hover.svg);
+}
+.map-iconbar-container .map-icon-list .ic1:hover span::before {
+  background-image: url(/base/images/map-right-iconbar/iconbar1_hover.svg);
+}
+.map-iconbar-container .map-icon-list .ic2 span::before {
+  width: 14.18px;
+  height: 17px;
+  background-image: url("/base/images//map-right-iconbar/iconbar2.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.map-iconbar-container .map-icon-list .ic2.active span::before {
+  background-image: url(/base/images/map-right-iconbar/iconbar2_hover.svg);
+}
+.map-iconbar-container .map-icon-list .ic2:hover span::before {
+  background-image: url(/base/images/map-right-iconbar/iconbar2_hover.svg);
+}
+.map-iconbar-container .map-icon-list .ic3 span::before {
+  width: 17.24px;
+  height: 16.5px;
+  background-image: url("/base/images//map-right-iconbar/iconbar3.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.map-iconbar-container .map-icon-list .ic3.active span::before {
+  background-image: url(/base/images/map-right-iconbar/iconbar3_hover.svg);
+}
+.map-iconbar-container .map-icon-list .ic3:hover span::before {
+  background-image: url(/base/images/map-right-iconbar/iconbar3_hover.svg);
+}
+.map-iconbar-container .map-icon-list .ic4 span::before {
+  width: 15.68px;
+  height: 16px;
+  background-image: url("/base/images//map-right-iconbar/iconbar4.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.map-iconbar-container .map-icon-list .ic4.active span::before {
+  background-image: url(/base/images/map-right-iconbar/iconbar4_hover.svg);
+}
+.map-iconbar-container .map-icon-list .ic4:hover span::before {
+  background-image: url(/base/images/map-right-iconbar/iconbar4_hover.svg);
+}
+.map-iconbar-container .map-icon-list .ic5 {
+  height: 45px;
+}
+.map-iconbar-container .map-icon-list .ic5 span::before {
+  width: 23px;
+  height: 10px;
+  background-image: url("/base/images//map-right-iconbar/iconbar5.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.map-iconbar-container .map-icon-list .ic5.active span {
+  background: #ebf8ff;
+}
+.map-iconbar-container .map-icon-list .ic5.active span::before {
+  background-image: url(/base/images/map-right-iconbar/iconbar5_hover.svg);
+}
+.map-iconbar-container .map-icon-list .ic5.active span em {
+  color: #03a0fc;
+}
+.map-iconbar-container .map-icon-list .ic5:hover span::before {
+  background-image: url(/base/images/map-right-iconbar/iconbar5_hover.svg);
+}
+
+/* vms 컴포넌트 */
+.vms-indicate {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 3px solid #2f2f2f;
+  background: #000;
+  box-sizing: border-box;
+}
+.vms-indicate .c-g {
+  color: #1eff00;
+}
+.vms-indicate .c-y {
+  color: #f6ff00;
+}
+.vms-indicate .c-r {
+  color: #f00;
+}
+.vms-indicate.inline {
+  flex-direction: row;
+  gap: 0 5px;
+}
+.vms-indicate.inline.sm {
+  padding: 3px 6px;
+}
+.vms-indicate.sm {
+  padding: 6px 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* 지도 위 vms화면 */
+.vms-display-container {
+  display: none;
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  z-index: 1;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.vms-display-container.active {
+  display: block;
+}
+.vms-display-container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.vms-display-container ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.vms-display-container ul li:not(.appear) .vms-indicate {
+  margin-top: 5px;
+}
+.vms-display-container ul li.appear .direction-know {
+  font-size: 16px;
+  font-weight: 600;
+}
+.vms-display-container ul li.appear .direction-know.type2 {
+  color: #fff;
+  background: #1634ae;
+}
+.vms-display-container ul li.appear .vms-indicate {
+  margin-top: 33px;
+}
+.vms-display-container ul li .vms-indicate {
+  width: 176px;
+  height: 70px;
+}
+.vms-display-container ul li .vms-indicate.inline {
+  height: 40px;
+}
+.vms-display-container .direction-know {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0 5px;
+  min-width: 176px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  box-sizing: border-box;
+}
+.vms-display-container .direction-know.type2 {
+  color: #555;
+  background: #d8d8d8;
+}
+.vms-display-container.bot {
+  bottom: 32px;
+}
+
+@media screen and (max-height: 925px) {
+  /* 모니터링 */
+  .congestion-noti-monitering.v2 .ly-left .content-bot {
+    height: 316px;
+  }
+  .congestion-noti-monitering.v2 .monitering-map-container {
+    height: 475px;
+  }
+}
