@@ -177,6 +177,7 @@
 }
 .congestion-noti-monitering.v2 .monitering-condition-container aside {
   width: 190.6px;
+  margin: 0 auto;
   padding: 15px 20px;
 }
 .congestion-noti-monitering.v2 .monitering-condition-container aside.right .bind img {
@@ -687,34 +688,11 @@
 
 /* vms 컴포넌트 */
 .vms-indicate {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  border: 3px solid #2f2f2f;
-  background: #000;
-  box-sizing: border-box;
+  margin-top: 33px;
 }
-.vms-indicate .c-g {
-  color: #1eff00;
-}
-.vms-indicate .c-y {
-  color: #f6ff00;
-}
-.vms-indicate .c-r {
-  color: #f00;
-}
-.vms-indicate.inline {
-  flex-direction: row;
-  gap: 0 5px;
-}
-.vms-indicate.inline.sm {
-  padding: 3px 6px;
-}
-.vms-indicate.sm {
-  padding: 6px 10px;
-  font-size: 20px;
-  font-weight: 700;
+.vms-indicate img {
+  display: block;
+  width: 100%;
 }
 
 /* 지도 위 vms화면 */
@@ -724,6 +702,7 @@
   left: 25px;
   right: 25px;
   z-index: 1;
+  height: 132px;
   padding: 15px 20px;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.2);
@@ -735,6 +714,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 100%;
 }
 .vms-display-container ul li {
   display: flex;
@@ -778,6 +758,57 @@
 .vms-display-container .direction-know.type2 {
   color: #555;
   background: #d8d8d8;
+}
+.vms-display-container.top {
+  top: 30px;
+  right: 85px;
+  height: 100px;
+}
+.vms-display-container.top .btn-close {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  border-radius: 5px;
+  background-color: #525252;
+  background-image: url(/base/images/btn_close_white.png);
+}
+.vms-display-container.top .tit {
+  min-width: 138px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 5px;
+  background: #193d56;
+  align-content: center;
+}
+.vms-display-container.top .bind {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0 35px;
+  padding-right: 50px;
+  height: 100%;
+}
+.vms-display-container.top .bind li {
+  flex-direction: row;
+}
+.vms-display-container.top .bind li::after {
+  content: "";
+  display: block;
+  margin: 0 15px;
+  width: 11px;
+  height: 20px;
+  background-image: url("/base/images/arr_right_gray.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.vms-display-container.top .bind li:last-child::after {
+  display: none;
 }
 .vms-display-container.bot {
   bottom: 32px;
