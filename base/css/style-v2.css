@@ -390,6 +390,43 @@
 .congestion-noti-monitering.v2 .monitering-condition-container .centered .cell-group-v2 span.cong {
   background: #c20000;
 }
+.congestion-noti-monitering.v2 .monitering-condition-container.geomji-situation aside {
+  padding-block: 20px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container.geomji-situation aside .bind img {
+  width: 18.6px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container.geomji-situation aside .bind .meter::before, .congestion-noti-monitering.v2 .monitering-condition-container.geomji-situation aside .bind .meter::after {
+  background-size: 6px 75px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container.geomji-situation .geomji-centered {
+  position: relative;
+  font-size: 0;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container.geomji-situation .geomji-centered .dotted-line {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  right: 0;
+  margin: 0;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container.geomji-situation .geomji-centered [class*=txt-directions] {
+  position: absolute;
+  align-content: center;
+  color: #878585;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  background: #cfcfcf;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container.geomji-situation .geomji-centered .txt-directions1 {
+  top: 31px;
+  height: 19.5px;
+}
+.congestion-noti-monitering.v2 .monitering-condition-container.geomji-situation .geomji-centered .txt-directions2 {
+  top: 62px;
+  height: 30px;
+}
 .congestion-noti-monitering.v2 .monitering-map-container {
   position: relative;
   height: 505px;

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>모니터링 - 검지 현황</title>
+    <script src="http://map.ngii.go.kr/emap/js/map/OpenLayers-6.4.3.js"></script>
+    <script src="http://map.ngii.go.kr/nps/common/lib/proj4js/proj4.js"></script>
+    <script src="http://map.ngii.go.kr/openapi/wmts_ngiiMap_v6.4.3.js?apikey=04trYP9_xwLAfALjwZ-B8g"></script>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/map-iconbar.js"></script>
+    <!-- 퍼블리싱 확인용 include -->
+    <script src="/base/js/common/ui.js"></script>
+    <!-- 검지현황 좌우 캔버스 -->
+    <script src="/base/js/common/canvas1.js"></script>
+    <!-- 검지현황 가운데 캔버스 -->
+    <script src="/base/js/common/canvas2.js"></script>
+    <link rel="stylesheet" href="/base/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="http://map.ngii.go.kr/emap/css/map/OpenLayers-6.4.3.css" />
+    <link rel="stylesheet" href="/base/css/common.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header" include-html="/base/html/common/header.html"></header>
+      <!-- //header -->
+
+      <main class="container bg-nileblue">
+        <section class="congestion-noti-monitering v2">
+          <section class="ly-left" include-html="/base/html/common/monitering_noti_nav2.html"></section>
+          <!-- //ly-left -->
+          <section class="ly-content">
+            <article class="primary-container">
+              <header class="monitering-condition-tab">
+                <span class="tab-btn-wrap">
+                  <a href="monitering1.html" class="tab-btn">셀 현황</a>
+                  <a href="monitering2.html" class="tab-btn active">검지 현황</a>
+                </span>
+                <span class="state-legend">
+                  <em>소통원활</em>
+                  <em>서행</em>
+                  <em>정체</em>
+                </span>
+              </header>
+              <!-- //condition-tab -->
+
+              <article class="monitering-condition-container geomji-situation">
+                <aside class="left">
+                  <em class="tit">용이2교차로 진입</em>
+                  <div class="bind">
+                    <img src="/base/images/ic_arr_down2.png" alt="방향 이미지" />
+                    <canvas id="geomjiCanvas1" width="94" height="192" title="용이2교차로 진입"></canvas>
+                    <span class="meter"><i>200m</i></span>
+                  </div>
+                </aside>
+                <!-- //left -->
+
+                <main class="centered">
+                  <div class="centered-inner">
+                    <div class="sign-wrap">
+                      <!-- 너비는 인라인 style width속성으로 조절해주세요. 제일 큰 너비는 flex:1로 설정하면 자동으로 꽉 채워집니다. -->
+                      <em style="width: 270px">주은교차로 방면</em>
+                      <em style="width: 112px">용이 2교차로</em>
+                      <em style="flex: 1">용이 2교차로</em>
+                      <em style="width: 110px">안성IC삼거리</em>
+                    </div>
+                    <!-- //sign-wrap -->
+
+                    <div class="section-info">
+                      <div class="section-info-inner">
+                        <!-- 너비는 인라인 style width속성으로 조절해주세요. 제일 큰 너비는 flex:1로 설정하면 자동으로 꽉 채워집니다. -->
+                        <div class="sec1" style="width: 272px">
+                          <i>2-1</i>
+                          <span>
+                            <em>140m</em>
+                          </span>
+                        </div>
+                        <!-- //sec -->
+                        <div class="sec2" style="width: 116px">
+                          <i>4</i>
+                          <span>
+                            <em>60m</em>
+                          </span>
+                        </div>
+                        <!-- //sec -->
+                        <div class="sec3" style="flex: 1">
+                          <i>5-1</i>
+                          <div class="distance-wrap">
+                            <span>
+                              <em>180m</em>
+                            </span>
+                            <span>
+                              <em>180m</em>
+                            </span>
+                          </div>
+                          <!-- //distance-wrap -->
+                        </div>
+                        <!-- //sec -->
+                      </div>
+                      <!-- //section-info-inner -->
+                    </div>
+                    <!-- //section-info -->
+
+                    <div class="geomji-centered">
+                      <canvas id="geomjiCanvas3" width="1090" height="124"></canvas>
+                      <hr class="dotted-line" />
+                      <!-- 만약 행의 x좌표가 바뀌게 될 경우 길 안내 텍스트 위치값 변경이 필요합니다. 인라인 style로 수정하면 됩니다. -->
+                      <i class="txt-directions1" style="left: 316px; right: 117px">터널 진출입부 (용이2교차로 방향)</i>
+                      <i class="txt-directions2" style="left: 435px; right: 117px">터널 진출입부 (안성 IC 삼거리 방향)</i>
+                    </div>
+                    <!-- //geomji-centered -->
+
+                    <div class="section-info bot">
+                      <div class="section-info-inner">
+                        <!-- 너비는 인라인 style width속성으로 조절해주세요. 제일 큰 너비는 flex:1로 설정하면 자동으로 꽉 채워집니다. -->
+                        <div class="sec1" style="width: 310px">
+                          <i>2-2</i>
+                          <span>
+                            <em>160m</em>
+                          </span>
+                        </div>
+                        <!-- //sec -->
+                        <div class="sec2" style="width: 234px">
+                          <i>3</i>
+                          <span>
+                            <em>120m</em>
+                          </span>
+                        </div>
+                        <!-- //sec -->
+                        <div class="sec3" style="width: 466px">
+                          <i>5-2</i>
+                          <span>
+                            <em>240m</em>
+                          </span>
+                        </div>
+                        <!-- //sec -->
+                      </div>
+                      <!-- //section-info-inner -->
+                    </div>
+                    <!-- //section-info -->
+                  </div>
+                  <!-- //centered-inner -->
+                </main>
+                <!-- //centered -->
+
+                <aside class="right">
+                  <em class="tit">안성TG 진출</em>
+                  <div class="bind">
+                    <img src="/base/images/ic_arr_down2.png" alt="방향 이미지" />
+                    <canvas id="geomjiCanvas2" width="94" height="192" title="안성TG 진출"></canvas>
+                    <span class="meter"><i>160m</i></span>
+                  </div>
+                </aside>
+                <!-- //right -->
+              </article>
+              <!-- //monitering-condition-container -->
+
+              <article id="map1" class="monitering-map-container" include-html="/base/html/common/monitering_map.html"></article>
+            </article>
+            <!-- //primary-container -->
+          </section>
+          <!-- //ly-content -->
+        </section>
+        <!-- //congestion-noti-monitering -->
+      </main>
+      <!-- //container -->
+
+      <footer include-html="/base/html/common/footer.html"></footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      // map init
+      window.onload = function () {
+        setTimeout(() => {
+          var map1 = new ngii_wmts.map('map1', { zoom: 6 });
+        }, 50);
+      };
+    </script>
+  </body>
+</html>
