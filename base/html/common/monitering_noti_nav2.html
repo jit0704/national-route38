@@ -4,7 +4,8 @@
     <ul>
       <li>
         <span>정체 상황<br />(용이 2교차로 방면)</span>
-        <span class="good">소통 원활</span>
+        <!-- 241116 정체상황 추가  -->
+        <span class="congested">정체 발생</span>
       </li>
       <li>
         <span>정체 상황<br />(용이 2교차로 방면)</span>
@@ -27,7 +28,8 @@
 <article class="content-mid">
   <table>
     <colgroup>
-      <col style="width: 70px" />
+      <!-- 241116: width값 수정 -->
+      <col style="width: 72px" />
       <col />
       <col />
       <col />
@@ -44,30 +46,38 @@
         <th>5</th>
       </tr>
     </thead>
+    <!-- 241116 tr, td 수정 -->
     <tbody>
       <tr>
         <th>현장 제어기</th>
-        <td><span>정상</span></td>
-        <td><span>정상</span></td>
-        <td><span>정상</span></td>
-        <td><span class="error">오류</span></td>
-        <td><span>정상</span></td>
+        <td><div class="void">-</div></td>
+        <td>
+          <div class="divide">
+            <span>정상</span>
+            <span>정상</span>
+          </div>
+        </td>
+        <td><div class="normal">정상</div></td>
+        <td><div class="error">오류</div></td>
+        <td>
+          <div class="divide">
+            <span>정상</span>
+            <span>정상</span>
+          </div>
+        </td>
       </tr>
       <tr>
-        <th>VMS 1번</th>
-        <td><span>정상</span></td>
-        <td><span>정상</span></td>
-        <td><span class="void">-</span></td>
-        <td><span class="void">-</span></td>
-        <td><span>정상</span></td>
-      </tr>
-      <tr>
-        <th>VMS 2번</th>
-        <td><span class="void">-</span></td>
-        <td><span>정상</span></td>
-        <td><span class="void">-</span></td>
-        <td><span class="void">-</span></td>
-        <td><span>정상</span></td>
+        <th>VMS</th>
+        <td><div class="normal">정상</div></td>
+        <td><div class="normal">정상</div></td>
+        <td><div class="void">-</div></td>
+        <td><div class="void">-</div></td>
+        <td>
+          <div class="divide">
+            <span>정상</span>
+            <span>정상</span>
+          </div>
+        </td>
       </tr>
     </tbody>
   </table>

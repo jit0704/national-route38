@@ -66,4 +66,33 @@ function cmmnui() {
     var inputCalendar = $('.input-calendar');
     inputTxt.not(inputCalendar).attr('autocomplete', 'off');
   })();
+
+  // 241116추가: HTML Include sideEffect가 생겨서 setTimeout함수 사용(개발파일에서는 setTimeout함수 삭제해주세요.)
+  setTimeout(() => {
+    // 영상 팝업 리사이징
+    $('.camera-popup-container').resizable({
+      containment: '.monitering-map-container',
+      minWidth: 300,
+      minHeight: 211,
+      resize: function (e, ui) {
+        $(ui.element).css({
+          width: ui.size.width + 20,
+          height: ui.size.height + 20,
+        });
+        $(e.target)
+          .children('.camera-popup-content')
+          .css({
+            width: ui.size.width,
+            height: ui.size.height - 30,
+          });
+      },
+    });
+
+    // 영상 팝업 드래그
+    $('.camera-popup-container').draggable({
+      handle: '.camera-popup-header',
+      containment: '.monitering-map-container',
+      scroll: false,
+    });
+  }, 200);
 }
