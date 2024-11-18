@@ -167,6 +167,9 @@
   letter-spacing: -0.36px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+.congestion-noti-monitering.v2 .ly-content {
+  position: relative;
+}
 .congestion-noti-monitering.v2 .monitering-condition-tab {
   padding: 15px 25px;
 }
@@ -850,7 +853,7 @@
   background-image: url(/base/images/btn_close_white.png);
 }
 .vms-display-container.top .tit {
-  min-width: 138px;
+  width: 138px;
   text-align: center;
   font-size: 16px;
   font-weight: 600;
@@ -866,6 +869,9 @@
   gap: 0 35px;
   padding-right: 50px;
   height: 100%;
+}
+.vms-display-container.top .bind ul {
+  justify-content: flex-start;
 }
 .vms-display-container.top .bind li {
   flex-direction: row;

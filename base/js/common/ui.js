@@ -71,7 +71,7 @@ function cmmnui() {
   setTimeout(() => {
     // 영상 팝업 리사이징
     $('.camera-popup-container').resizable({
-      containment: '.monitering-map-container',
+      containment: '.ly-content',
       minWidth: 300,
       minHeight: 211,
       resize: function (e, ui) {
@@ -91,7 +91,7 @@ function cmmnui() {
     // 영상 팝업 드래그
     $('.camera-popup-container').draggable({
       handle: '.camera-popup-header',
-      containment: '.monitering-map-container',
+      containment: '.ly-content',
       scroll: false,
     });
   }, 200);
