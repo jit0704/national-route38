@@ -5,7 +5,7 @@ const 좌우검지현황 = (id) => {
   const ctx = canvas.getContext('2d'); // 2D 컨텍스트를 가져옴
 
   const barWidth = 30; // 막대의 너비
-  const barHeight = 192; // 막대의 높이
+  const barHeight = 202; // 막대의 높이
   const spaceBetweenBars = 2; // 막대 사이의 간격
 
   // 막대기 그리기

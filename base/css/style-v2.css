@@ -50,6 +50,9 @@
 .congestion-noti-monitering.v2 .ly-left .content-top .bind ul li span:first-child {
   border: 1px solid #597081;
 }
+.congestion-noti-monitering.v2 .ly-left .content-top .bind ul li span:last-child {
+  font-size: 16px;
+}
 .congestion-noti-monitering.v2 .ly-left .content-top .bind ul li span.good {
   background: #00c337;
 }
@@ -92,6 +95,7 @@
   height: 42px;
   margin: 0 auto;
   border-radius: 5px;
+  font-weight: 400;
 }
 .congestion-noti-monitering.v2 .ly-left .content-mid table tbody td span {
   display: block;
@@ -358,6 +362,9 @@
   background: url(/base/images/arr_section.png) no-repeat 0 50%;
   background-size: 203px 7px;
 }
+.congestion-noti-monitering.v2 .monitering-condition-container .centered .section-info-inner [class*=sec].last {
+  border-right: 0;
+}
 .congestion-noti-monitering.v2 .monitering-condition-container .centered .section-info .distance-wrap {
   display: flex;
   flex-direction: row;
@@ -429,9 +436,6 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-}
-.congestion-noti-monitering.v2 .monitering-condition-container.geomji-situation aside {
-  padding-block: 20px;
 }
 .congestion-noti-monitering.v2 .monitering-condition-container.geomji-situation aside .bind img {
   width: 18.6px;
@@ -806,10 +810,13 @@
   margin-top: 5px;
 }
 .vms-display-container ul li.appear .direction-know {
-  font-size: 16px;
-  font-weight: 600;
+  height: 27px;
+  font-size: 14px;
+  font-weight: 500;
 }
 .vms-display-container ul li.appear .direction-know.type2 {
+  font-size: 14px;
+  font-weight: 500;
   color: #fff;
   background: #1634ae;
 }

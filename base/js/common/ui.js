@@ -67,6 +67,67 @@ function cmmnui() {
     inputTxt.not(inputCalendar).attr('autocomplete', 'off');
   })();
 
+  // 241119 영상 팝업 확대 클릭 이벤트
+  $(document).on('click', '.camera-popup-container .is-reduce', function (e) {
+    e.preventDefault();
+    const $parent = $(this).closest('.camera-popup-container');
+    const $popContent = $parent.find('.camera-popup-content');
+    $parent.css({
+      width: '700px',
+      height: '500px',
+    });
+    $popContent.css({
+      width: '100%',
+      height: 'calc(100% - 30px)',
+    });
+
+    // 영상 확대시 좌표값이 containment 밖으로 넘어가는 현상 수정
+    // 드래그를 위해 .camera-popup-header를 트리거
+    const $header = $parent.find('.camera-popup-header');
+    const offset = $header.offset();
+
+    // mousedown 이벤트 트리거
+    $header.trigger(
+      $.Event('mousedown', {
+        which: 1, // 왼쪽 마우스 버튼
+        pageX: offset.left, // 클릭 위치 X
+        pageY: offset.top, // 클릭 위치 Y
+      }),
+    );
+
+    // mousemove 이벤트 트리거
+    $(document).trigger(
+      $.Event('mousemove', {
+        pageX: offset.left - 1, // 드래그할 위치 X
+        pageY: offset.top - 1, // 드래그할 위치 Y
+      }),
+    );
+
+    // mouseup 이벤트 트리거
+    $(document).trigger($.Event('mouseup'));
+
+    // '확대' 버튼명을 '축소'로 변경하고 is-expansion클래스명 추가
+    $(this).text('축소').removeClass('is-reduce').addClass('is-expansion');
+  });
+
+  // 241119 영상 팝업 축소 클릭 이벤트
+  $(document).on('click', '.camera-popup-container .is-expansion', function (e) {
+    e.preventDefault();
+    const $parent = $(this).closest('.camera-popup-container');
+    const $popContent = $parent.find('.camera-popup-content');
+    $parent.css({
+      width: '300px',
+      height: '211px',
+    });
+    $popContent.css({
+      width: '280px',
+      height: '161px',
+    });
+
+    // '축소' 버튼명을 '확대'로 변경하고 is-reduce클래스명 추가
+    $(this).text('확대').removeClass('is-expansion').addClass('is-reduce');
+  });
+
   // 241116추가: HTML Include sideEffect가 생겨서 setTimeout함수 사용(개발파일에서는 setTimeout함수 삭제해주세요.)
   setTimeout(() => {
     // 영상 팝업 리사이징

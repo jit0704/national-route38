@@ -53,7 +53,8 @@
                     <img src="/base/images/ic_arr_down2.png" alt="방향 이미지" />
                     <!-- 241116 canvas태그의 부모 div 추가 -->
                     <div class="canvas-wrap">
-                      <canvas id="geomjiCanvas1" width="94" height="192" title="용이2교차로 진입"></canvas>
+                      <!-- 241119 캔버스 height값 변경 -->
+                      <canvas id="geomjiCanvas1" width="94" height="202" title="용이2교차로 진입"></canvas>
                     </div>
                     <span class="meter"><i>200m</i></span>
                   </div>
@@ -157,7 +158,8 @@
                     <img src="/base/images/ic_arr_down2.png" alt="방향 이미지" />
                     <!-- 241116 canvas태그의 부모 div 추가 -->
                     <div class="canvas-wrap">
-                      <canvas id="geomjiCanvas2" width="94" height="192" title="안성TG 진출"></canvas>
+                      <!-- 241119 캔버스 height값 변경 -->
+                      <canvas id="geomjiCanvas2" width="94" height="202" title="안성TG 진출"></canvas>
                     </div>
                     <span class="meter"><i>160m</i></span>
                   </div>
@@ -167,6 +169,25 @@
               <!-- //monitering-condition-container -->
 
               <article id="map1" class="monitering-map-container" include-html="/base/html/common/monitering_map.html"></article>
+
+              <!-- 카메라 팝업(active 클래스 제거시 카메라 팝업 숨김) -->
+              <div class="camera-popup-container active" style="left: 0; top: 200px">
+                <header class="camera-popup-header">
+                  <em class="tit">지점명 - 카메라 명</em>
+                  <div class="bind">
+                    <!-- 241119 is-reduce클래스명 추가 -->
+                    <a href="#" class="btn-expansion is-reduce">확대</a>
+                    <a href="#" class="btn-popup-close"><span class="screen-out">팝업 닫기</span></a>
+                  </div>
+                </header>
+                <div class="camera-popup-content">
+                  <video autoplay loop muted width="100%" height="100%">
+                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <!-- //camera-popup-content -->
+              </div>
+              <!-- //camera-popup-container -->
             </article>
             <!-- //primary-container -->
           </section>
