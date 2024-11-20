@@ -205,7 +205,6 @@
   justify-content: space-between;
   height: 265px;
   border-top: 1px solid #e3e3e3;
-  border-bottom: 1px solid #e3e3e3;
 }
 .congestion-noti-monitering.v2 .monitering-condition-container aside {
   width: 190.6px;
@@ -471,10 +470,20 @@
   top: 62px;
   height: 30px;
 }
+.congestion-noti-monitering.v2 .monitering-condition-container.geomji-situation ~ .monitering-map-container {
+  height: 504px;
+  margin-top: 0;
+}
 .congestion-noti-monitering.v2 .monitering-map-container {
   position: relative;
-  height: 505px;
+  height: 485px;
+  margin-top: 12px;
   padding: 15px;
+  border-top: 1px solid #e3e3e3;
+}
+.congestion-noti-monitering.v2 .monitering-map-container .ol-viewport {
+  border-radius: 5px;
+  border: 1px solid #e3e3e3;
 }
 .congestion-noti-monitering.v2 .monitering-map-container > [class*=ico] {
   position: absolute;
@@ -483,8 +492,8 @@
 
 /* 지도 > 버튼 아이콘 */
 .ico-vms {
-  width: 40px;
-  height: 52.72px;
+  width: 32px;
+  height: 42.18px;
   background-image: url("/base/images//map/ic_vms.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -810,7 +819,7 @@
   margin-top: 5px;
 }
 .vms-display-container ul li.appear .direction-know {
-  height: 27px;
+  height: 26px;
   font-size: 14px;
   font-weight: 500;
 }
@@ -901,12 +910,46 @@
   bottom: 32px;
 }
 
+/* 프로그래스바 - 모니터링 화면 레이아웃에 맞게 css수정 */
+.progress {
+  height: auto;
+  margin-top: 2px;
+  font-size: 0;
+}
+.progress-container {
+  height: auto;
+  padding-top: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.progress-bar {
+  appearance: none;
+  height: 6px;
+  background: #bcbcbc;
+}
+.progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: #193d56;
+}
+
+.input-txt {
+  color: #727272;
+}
+
 @media screen and (max-height: 925px) {
   /* 모니터링 */
   .congestion-noti-monitering.v2 .ly-left .content-bot {
     height: 304px;
   }
+  /* 모니터링 셀 현황 맵 */
   .congestion-noti-monitering.v2 .monitering-map-container {
-    height: 475px;
+    height: 456px;
+  }
+  /* 모니터링 검지 현황 맵 */
+  .congestion-noti-monitering.v2 .monitering-condition-container.geomji-situation ~ .monitering-map-container {
+    height: 476px;
   }
 }
