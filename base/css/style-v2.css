@@ -285,7 +285,7 @@
   border-right: 1px solid #e3e3e3;
 }
 .congestion-noti-monitering.v2 .monitering-condition-container .centered .dotted-line {
-  margin: 8px 0 7px;
+  margin: 7px 0;
   width: 100%;
   height: 0;
   border-top: 1px dashed #696969;
@@ -310,7 +310,7 @@
 .congestion-noti-monitering.v2 .monitering-condition-container .centered .section-info {
   position: relative;
   margin-top: 14px;
-  padding-top: 45px;
+  padding-top: 37px;
 }
 .congestion-noti-monitering.v2 .monitering-condition-container .centered .section-info-inner {
   display: flex;
@@ -390,6 +390,7 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: 1px 0;
+  position: relative;
   width: 100%;
 }
 .congestion-noti-monitering.v2 .monitering-condition-container .centered .cell-bar-v2.is-directions {
